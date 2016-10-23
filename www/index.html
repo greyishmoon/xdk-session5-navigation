@@ -25,6 +25,10 @@
     <script type="application/javascript" src="lib/jquery-1.11.3.min.js"></script>
     <script type="application/javascript" src="lib/jquery.mobile-1.4.5.min.js"></script>
     
+    <!-- include stylesheet for application -->
+    <link rel="stylesheet" href="css/app.css">
+    
+    
     <!-- backup CDN for JQuery + JQuery mobile -->
 <!--
     <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
@@ -41,25 +45,454 @@
 
 <body>
     
-    <div data-role="page">
+    <div data-role="page" id="home">
+        <div data-role="header" data-theme="b" data-position="fixed">
+            <h1>Session 5 Home</h1>
+        </div>
 
-        <div data-role="header">
-            <h1>Blank Template</h1>
-        </div><!-- /header -->
-
-        <div role="main" class="ui-content">
+        <div data-role="main" class="ui-content">
+            <p class="csstest">Select a worksheet example:</p>
+            <a id="img_button_1" href="#simpleflatone" data-role="button" class="csstest">Simple flat example</a>
+            <a href="#shop" data-role="button">Simple heirarchical Shop example</a>
+            <a href="#btn1" data-role="button">Simple button nav bar example</a>
+            <a href="#panleftoverlay1" data-role="button">Panel Overlay Left example</a>
             
-            <p>Hello Blank Template</p>
-            <p>JQuery running - Version: <span class="jq-version"><b>NOT LOADED!</b></span></p>
-            <p>JQuery Mobile running - Version: <span class="jqm-version"><b>NOT LOADED!</b></span></p>
             
-        </div><!-- /content -->
+        </div>
 
-        <div data-role="footer">
-            <h4>My Footer</h4>
-        </div><!-- /footer -->
- 
-    </div><!-- /page -->
+        <div data-role="footer" data-position="fixed">
+            <h1>Footer Text</h1>
+        </div>
+    </div> 
+    
+
+    
+    
+<!-- SIMPLE FLAT PAGES   -->
+    
+    <div data-role="page" id="simpleflatone">
+        <div data-role="header" data-position="fixed">
+            <a class = "hidden" href="index.html" ></a>
+            <h1>Simple Flat Page 1</h1> 
+            <a href="#home" class="ui-btn ui-corner-all ui-icon-home ui-btn-icon-left">Home</a>
+        </div>
+
+        <div data-role="main" class="ui-content">
+            <p>This is Page 1</p>
+            <a href="#simpleflattwo">Go to Page 2</a>
+        </div>
+
+        <div data-role="footer" data-position="fixed">
+            <h1>Footer Text</h1>
+        </div>
+    </div> 
+
+    <div data-role="page" id="simpleflattwo">
+        <div data-role="header" data-position="fixed">
+            <a class = "hidden" href="index.html" ></a>
+            <h1>Simple Flat Page 2</h1> 
+            <a href="index.html#home" class="ui-btn ui-corner-all ui-icon-home ui-btn-icon-left">Home</a>
+        </div>
+
+        <div data-role="main" class="ui-content">
+            <p>This is Page 2</p>
+            <a href="#simpleflatthree">Go to Page 3</a>
+        </div>
+
+        <div data-role="footer" data-position="fixed">
+            <h1>Footer Text</h1>
+        </div>
+    </div> 
+    
+    <div data-role="page" id="simpleflatthree">
+        <div data-role="header" data-position="fixed">
+            <a class = "hidden" href="index.html" ></a>
+            <h1>Simple Flat Page 3</h1> 
+            <a href="index.html#home" class="ui-btn ui-corner-all ui-icon-home ui-btn-icon-left">Home</a>
+        </div>
+
+        <div data-role="main" class="ui-content">
+            <p>This is Page 3</p>
+            <a href="#simpleflatone">Go to Page 1</a>
+        </div>
+
+        <div data-role="footer" data-position="fixed">
+            <h1>Footer Text</h1>
+        </div>
+    </div> 
+    
+    
+<!-- SIMPLE HIERARCHICAL PAGES   -->
+    
+    <div data-role="page" id="shop">
+        <div data-role="header" data-position="fixed">
+            <a class = "hidden" href="index.html" ></a>
+            <h1>SHOP</h1> 
+            <a href="#home" class="ui-btn ui-corner-all ui-icon-home ui-btn-icon-left">Home</a>
+        </div>
+
+        <div data-role="main" class="ui-content">
+            <p>SHOP HOME - Simple Hierarchical example</p>
+            <a href="#veg">Buy Vegetables</a><br>
+            <a href="#fruit">Buy Fruit</a><br>
+            <a href="#drinks">Buy Drinks</a><br><br>
+            <a href="#shop">SHOP HOME</a>
+            
+        </div>
+
+        <div data-role="footer" data-position="fixed">
+            <h1>Footer Text</h1>
+        </div>
+    </div> 
+    
+    <!-- VEGETABLES   -->
+    
+        <div data-role="page" id="veg">
+            <div data-role="header" data-position="fixed">
+                <a class = "hidden" href="index.html" ></a>
+                <h1>VEGETABLES</h1> 
+                <a href="#home" class="ui-btn ui-corner-all ui-icon-home ui-btn-icon-left">Home</a>
+            </div>
+
+            <div data-role="main" class="ui-content">
+                <p>SHOP FOR VEG</p>
+                <a href="#carrots">Buy Carrots</a><br>
+                <a href="#potatoes">Buy Potatoes</a><br>
+                <a href="#cabbage">Buy Cabbage</a><br><br>
+                <a href="#shop">SHOP HOME</a>
+            </div>
+
+            <div data-role="footer" data-position="fixed">
+                <h1>Footer Text</h1>
+            </div>
+        </div> 
+    
+    
+            <div data-role="page" id="carrots">
+                <div data-role="header" data-position="fixed">
+                    <a class = "hidden" href="index.html" ></a>
+                    <h1>CARROTS</h1> 
+                    <a href="#home" class="ui-btn ui-corner-all ui-icon-home ui-btn-icon-left">Home</a>
+                </div>
+
+                <div data-role="main" class="ui-content">
+                    <p>BUY CARROTS</p>
+                    <a href="#veg">Return to Vegetables</a><br><br>
+                    <a href="#shop">SHOP HOME</a>
+
+                </div>
+
+                <div data-role="footer" data-position="fixed">
+                    <h1>Footer Text</h1>
+                </div>
+            </div> 
+
+            <div data-role="page" id="potatoes">
+                <div data-role="header" data-position="fixed">
+                    <a class = "hidden" href="index.html" ></a>
+                    <h1>POTATOES</h1> 
+                    <a href="#home" class="ui-btn ui-corner-all ui-icon-home ui-btn-icon-left">Home</a>
+                </div>
+
+                <div data-role="main" class="ui-content">
+                    <p>BUY POTATOES</p>
+                    <a href="#veg">Return to Vegetables</a><br><br>
+                    <a href="#shop">SHOP HOME</a>
+
+                </div>
+
+                <div data-role="footer" data-position="fixed">
+                    <h1>Footer Text</h1>
+                </div>
+            </div> 
+
+            <div data-role="page" id="cabbage">
+                <div data-role="header" data-position="fixed">
+                    <a class = "hidden" href="index.html" ></a>
+                    <h1>CABBAGE</h1> 
+                    <a href="#home" class="ui-btn ui-corner-all ui-icon-home ui-btn-icon-left">Home</a>
+                </div>
+
+                <div data-role="main" class="ui-content">
+                    <p>BUY CABBAGE</p>
+                    <a href="#veg">Return to Vegetables</a><br><br>
+                    <a href="#shop">SHOP HOME</a>
+
+                </div>
+
+                <div data-role="footer" data-position="fixed">
+                    <h1>Footer Text</h1>
+                </div>
+            </div> 
+    
+    <!-- FRUIT   -->
+
+        <div data-role="page" id="fruit">
+            <div data-role="header" data-position="fixed">
+                <a class = "hidden" href="index.html" ></a>
+                <h1>FRUIT</h1> 
+                <a href="#home" class="ui-btn ui-corner-all ui-icon-home ui-btn-icon-left">Home</a>
+            </div>
+
+            <div data-role="main" class="ui-content">
+                <p>SHOP FOR FRUIT</p>
+                <a href="#apples">Buy Apples</a><br>
+                <a href="#bananas">Buy Bananas</a><br>
+                <a href="#pears">Buy Pears</a><br><br>
+                <a href="#shop">SHOP HOME</a>
+            </div>
+
+            <div data-role="footer" data-position="fixed">
+                <h1>Footer Text</h1>
+            </div>
+        </div> 
+    
+       
+            <div data-role="page" id="apples">
+                <div data-role="header" data-position="fixed">
+                    <a class = "hidden" href="index.html" ></a>
+                    <h1>APPLES</h1> 
+                    <a href="#home" class="ui-btn ui-corner-all ui-icon-home ui-btn-icon-left">Home</a>
+                </div>
+
+                <div data-role="main" class="ui-content">
+                    <p>BUY APPLES</p>
+                    <a href="#fruit">Return to Fruit</a><br><br>
+                    <a href="#shop">SHOP HOME</a>
+
+                </div>
+
+                <div data-role="footer" data-position="fixed">
+                    <h1>Footer Text</h1>
+                </div>
+            </div> 
+
+            <div data-role="page" id="bananas">
+                <div data-role="header" data-position="fixed">
+                    <a class = "hidden" href="index.html" ></a>
+                    <h1>BANANAS</h1> 
+                    <a href="#home" class="ui-btn ui-corner-all ui-icon-home ui-btn-icon-left">Home</a>
+                </div>
+
+                <div data-role="main" class="ui-content">
+                    <p>BUY BANANAS</p>
+                    <a href="#fruit">Return to Fruit</a><br><br>
+                    <a href="#shop">SHOP HOME</a>
+
+                </div>
+
+                <div data-role="footer" data-position="fixed">
+                    <h1>Footer Text</h1>
+                </div>
+            </div> 
+
+            <div data-role="page" id="pears">
+                <div data-role="header" data-position="fixed">
+                    <a class = "hidden" href="index.html" ></a>
+                    <h1>PEARS</h1> 
+                    <a href="#home" class="ui-btn ui-corner-all ui-icon-home ui-btn-icon-left">Home</a>
+                </div>
+
+                <div data-role="main" class="ui-content">
+                    <p>BUY PEARS</p>
+                    <a href="#fruit">Return to Fruit</a><br><br>
+                    <a href="#shop">SHOP HOME</a>
+
+                </div>
+
+                <div data-role="footer" data-position="fixed">
+                    <h1>Footer Text</h1>
+                </div>
+            </div> 
+    
+    <!-- DRINKS   -->
+
+        <div data-role="page" id="drinks">
+            <div data-role="header" data-position="fixed">
+                <a class = "hidden" href="index.html" ></a>
+                <h1>DRINKS</h1> 
+                <a href="#home" class="ui-btn ui-corner-all ui-icon-home ui-btn-icon-left">Home</a>
+            </div>
+
+            <div data-role="main" class="ui-content">
+                <p>SHOP FOR DRINKS</p>
+                <a href="#juice">Buy Juice</a><br>
+                <a href="#beer">Buy Beer</a><br>
+                <a href="#wine">Buy Wine</a><br><br>
+                <a href="#shop">SHOP HOME</a>
+            </div>
+
+            <div data-role="footer" data-position="fixed">
+                <h1>Footer Text</h1>
+            </div>
+        </div> 
+    
+              <div data-role="page" id="juice">
+                <div data-role="header" data-position="fixed">
+                    <a class = "hidden" href="index.html" ></a>
+                    <h1>JUICE</h1> 
+                    <a href="#home" class="ui-btn ui-corner-all ui-icon-home ui-btn-icon-left">Home</a>
+                </div>
+
+                <div data-role="main" class="ui-content">
+                    <p>BUY JUICE</p>
+                    <a href="#drinks">Return to Drinks</a><br><br>
+                    <a href="#shop">SHOP HOME</a>
+
+                </div>
+
+                <div data-role="footer" data-position="fixed">
+                    <h1>Footer Text</h1>
+                </div>
+            </div> 
+
+            <div data-role="page" id="beer">
+                <div data-role="header" data-position="fixed">
+                    <a class = "hidden" href="index.html" ></a>
+                    <h1>BEER</h1> 
+                    <a href="#home" class="ui-btn ui-corner-all ui-icon-home ui-btn-icon-left">Home</a>
+                </div>
+
+                <div data-role="main" class="ui-content">
+                    <p>BUY BEER</p>
+                    <a href="#drinks">Return to Drinks</a><br><br>
+                    <a href="#shop">SHOP HOME</a>
+
+                </div>
+
+                <div data-role="footer" data-position="fixed">
+                    <h1>Footer Text</h1>
+                </div>
+            </div> 
+
+            <div data-role="page" id="wine">
+                <div data-role="header" data-position="fixed">
+                    <a class = "hidden" href="index.html" ></a>
+                    <h1>WINE</h1> 
+                    <a href="#home" class="ui-btn ui-corner-all ui-icon-home ui-btn-icon-left">Home</a>
+                </div>
+
+                <div data-role="main" class="ui-content">
+                    <p>BUY WINE</p>
+                    <a href="#drinks">Return to Drinks</a><br><br>
+                    <a href="#shop">SHOP HOME</a>
+
+                </div>
+
+                <div data-role="footer" data-position="fixed">
+                    <h1>Footer Text</h1>
+                </div>
+            </div>   
+
+<!-- SIMPLE BUTTON PAGES   -->
+    
+    <div data-role="page" id="btn1">
+        <div data-role="header" data-position="fixed">
+            <a class = "hidden" href="index.html" ></a>
+            <h1>Buttons Page 1</h1> 
+            <a href="#home" class="ui-btn ui-corner-all ui-icon-home ui-btn-icon-left">Home</a>
+        </div>
+
+        <div data-role="main" class="ui-content">
+            <p>This is Page 1</p>
+        </div>
+
+        <div data-role="footer" data-position="fixed">
+            <a href="#btn1" class="ui-btn ui-corner-all">Page 1</a>
+            <a href="#btn2" class="ui-btn ui-corner-all">Page 2</a>
+            <a href="#btn3" class="ui-btn ui-corner-all">Page 3</a>
+        </div>
+    </div> 
+
+    <div data-role="page" id="btn2">
+        <div data-role="header" data-position="fixed">
+            <a class = "hidden" href="index.html" ></a>
+            <h1>Buttons Page 2</h1> 
+            <a href="index.html#home" class="ui-btn ui-corner-all ui-icon-home ui-btn-icon-left">Home</a>
+        </div>
+
+        <div data-role="main" class="ui-content">
+            <p>This is Page 2</p>
+        </div>
+
+        <div data-role="footer" data-position="fixed">
+            <a href="#btn1" class="ui-btn ui-corner-all">Page 1</a>
+            <a href="#btn2" class="ui-btn ui-corner-all">Page 2</a>
+            <a href="#btn3" class="ui-btn ui-corner-all">Page 3</a>
+        </div>
+    </div> 
+    
+    <div data-role="page" id="btn3">
+        <div data-role="header" data-position="fixed">
+            <a class = "hidden" href="index.html" ></a>
+            <h1>Buttons Page 3</h1> 
+            <a href="index.html#home" class="ui-btn ui-corner-all ui-icon-home ui-btn-icon-left">Home</a>
+        </div>
+
+        <div data-role="main" class="ui-content">
+            <p>This is Page 3</p>
+        </div>
+
+        <div data-role="footer" data-position="fixed">
+            <a href="#btn1" class="ui-btn ui-corner-all">Page 1</a>
+            <a href="#btn2" class="ui-btn ui-corner-all">Page 2</a>
+            <a href="#btn3" class="ui-btn ui-corner-all">Page 3</a>
+        </div>
+    </div> 
+    
+    
+<!-- PANELS LEFT OVERLAY   -->
+    
+    <div data-role="page" id="panleftoverlay1">
+        
+          <div data-role="panel" id="leftpanel1" data-position="left" data-display="overlay" data-dismissible="true" data-theme="b">
+              
+              <a href="#panleftoverlay1" data-rel="close" class="ui-btn ui-btn-inline ui-shadow ui-corner-all ui-btn-a">Page 1</a><br>
+              <a href="#panleftoverlay2" data-rel="close" class="ui-btn ui-btn-inline ui-shadow ui-corner-all ui-btn-a">Page 2</a><br>
+              <a href="#panleftoverlay3" data-rel="close" class="ui-btn ui-btn-inline ui-shadow ui-corner-all ui-btn-a">Page 3</a>
+          </div>
+        
+        <div data-role="header" data-position="fixed">
+            <a href="#leftpanel1" class="ui-btn ui-corner-all ui-icon-home ui-btn-icon-left ui-icon-bars ui-btn-icon-left">Menu</a>
+            <h1>Panel Page 1</h1> 
+            <a href="index.html#home" class="ui-btn ui-corner-all ui-icon-home ui-btn-icon-left ui-icon-home ui-btn-icon-left">Home</a>
+        </div>
+
+        <div data-role="main" class="ui-content">
+            <p>This is Page 1</p>
+        </div>
+
+        <div data-role="footer" data-position="fixed">
+            
+        </div>
+    </div> 
+    
+    <div data-role="page" id="panleftoverlay2">
+        
+          <div data-role="panel" id="leftpanel1" data-position="left" data-display="overlay" data-dismissible="true" data-theme="b">
+              <a href="#panleftoverlay1" data-rel="close" class="ui-btn ui-btn-inline ui-shadow ui-corner-all ui-btn-a">Page 1</a><br>
+              <a href="#panleftoverlay2" data-rel="close" class="ui-btn ui-btn-inline ui-shadow ui-corner-all ui-btn-a">Page 2</a><br>
+              <a href="#panleftoverlay3" data-rel="close" class="ui-btn ui-btn-inline ui-shadow ui-corner-all ui-btn-a">Page 3</a>
+          </div>
+        
+        <div data-role="header" data-position="fixed">
+            <a href="#leftpanel1" class="ui-btn ui-corner-all ui-icon-home ui-btn-icon-left ui-icon-bars ui-btn-icon-left">Menu</a>
+            <h1>Panel Page 2</h1> 
+            <a href="index.html#home" class="ui-btn ui-corner-all ui-icon-home ui-btn-icon-left ui-icon-home ui-btn-icon-left">Home</a>
+        </div>
+
+        <div data-role="main" class="ui-content">
+            <p>This is Page 2</p>
+        </div>
+
+        <div data-role="footer" data-position="fixed">
+            
+        </div>
+    </div> 
+    
+
+    
+    
     
 </body>
 </html>

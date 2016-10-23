@@ -28,6 +28,10 @@ function onAppReady() {
 //    alert("onAppReady called!");
     
     
+    // Hide placeholder links
+    $(".hidden").hide();
+    
+    
     
     
     // Get JQuery version
