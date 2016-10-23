@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<!--
+  * Please see the included README.md file for license terms and conditions.
+  -->
+<head>
+    <title>Blank Cordova Mobile App Project Template (Lite)</title>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+
+    <!-- see http://webdesign.tutsplus.com/tutorials/htmlcss-tutorials/quick-tip-dont-forget-the-viewport-meta-tag -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <style>
+        /* following two viewport lines are equivalent to the meta viewport statement above, needed for Windows */
+        /* see http://www.quirksmode.org/blog/archives/2014/05/html5_dev_conf.html and http://dev.w3.org/csswg/css-device-adapt/ */
+        @-ms-viewport { width: 100vw ; zoom: 100% ; }  @viewport { width: 100vw ; zoom: 100% ; }
+        @-ms-viewport { user-zoom: fixed ; }           @viewport { user-zoom: fixed ; }
+    </style>
+
+    <script src="cordova.js"></script>          <!-- phantom library, needed for Cordova api calls, added during build -->
+    <script src="js/app.js"></script>           <!-- recommended location of your JavaScript code relative to other JS files -->
+    <script src="xdk/init-dev.js"></script>     <!-- normalizes device and document ready events, see README for details -->
+    
+    <!-- include JQuery + JQuery mobile - local libraries -->
+    <link rel="stylesheet" type="text/css" href="lib/jquery.mobile-1.4.5.min.css">
+    <script type="application/javascript" src="lib/jquery-1.11.3.min.js"></script>
+    <script type="application/javascript" src="lib/jquery.mobile-1.4.5.min.js"></script>
+    
+    <!-- backup CDN for JQuery + JQuery mobile -->
+<!--
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+-->
+    
+<!-- latest JQUERY CDN if required - clashes with JQuery Mobile which requires jquery-1.11.3.min.js-->
+<!--    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"> </script>-->
+    
+    
+    
+</head>
+
+<body>
+    
+    <div data-role="page">
+
+        <div data-role="header">
+            <h1>Blank Template</h1>
+        </div><!-- /header -->
+
+        <div role="main" class="ui-content">
+            
+            <p>Hello Blank Template</p>
+            <p>JQuery running - Version: <span class="jq-version"><b>NOT LOADED!</b></span></p>
+            <p>JQuery Mobile running - Version: <span class="jqm-version"><b>NOT LOADED!</b></span></p>
+            
+        </div><!-- /content -->
+
+        <div data-role="footer">
+            <h4>My Footer</h4>
+        </div><!-- /footer -->
+ 
+    </div><!-- /page -->
+    
+</body>
+</html>
