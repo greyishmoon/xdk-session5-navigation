@@ -28,6 +28,10 @@ function onAppReady() {
 //    alert("onAppReady called!");
     
     
+    // Initialise external panels
+    $( "body>[data-role='panel']" ).panel();
+    
+    
     // Hide placeholder links
     $(".hidden").hide();
     
