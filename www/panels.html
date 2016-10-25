@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>External Panels Demo</title>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <style>
+        /* following two viewport lines are equivalent to the meta viewport statement above, needed for Windows */
+        /* see http://www.quirksmode.org/blog/archives/2014/05/html5_dev_conf.html and http://dev.w3.org/csswg/css-device-adapt/ */
+        @-ms-viewport { width: 100vw ; zoom: 100% ; }  @viewport { width: 100vw ; zoom: 100% ; }
+        @-ms-viewport { user-zoom: fixed ; }           @viewport { user-zoom: fixed ; }
+    </style>
+
+    <script src="cordova.js"></script>          <!-- phantom library, needed for Cordova api calls, added during build -->
+    <script src="js/app.js"></script>           <!-- recommended location of your JavaScript code relative to other JS files -->
+    <script src="xdk/init-dev.js"></script>     <!-- normalizes device and document ready events, see README for details -->
+    
+    <!-- include JQuery + JQuery mobile - local libraries -->
+    <link rel="stylesheet" type="text/css" href="lib/jquery.mobile-1.4.5.min.css">
+    <script type="application/javascript" src="lib/jquery-1.11.3.min.js"></script>
+    <script type="application/javascript" src="lib/jquery.mobile-1.4.5.min.js"></script>
+    
+    <!-- include stylesheet for application -->
+    <link rel="stylesheet" href="css/app.css">
+    
+<!--
+    <script>
+    $( document ).ready(function() {
+        alert( "document loaded" );
+    });
+ 
+    $( window ).load(function() {
+        alert( "window loaded" );
+    });
+        
+    $(document).on("pagecontainershow", function (e, ui) {
+        alert( "pagecontainershow loaded" );
+    });
+    </script>
+-->
+
+
+    
+</head>
+
+<body>
+    
+<!-- CONTENT PAGES -->
+    
+    <div data-role="page" id="ex-panel-page-1" data-quicklinks="true">
+
+        <div data-role="header">
+            <a href="#leftpanel1" class="ui-btn ui-corner-all ui-icon-home ui-btn-icon-left ui-icon-bars ui-btn-icon-left" rel="external">Menu</a>
+            <h1>External panels 1</h1>
+            <a href="index.html" class="ui-btn ui-corner-all ui-icon-home ui-btn-icon-left">Home</a>
+            
+        </div><!-- /header -->
+
+        <div role="main" class="ui-content jqm-content jqm-fullwidth">
+
+            <h1>External Panels Page 1</h1>
+
+            <p><strong>Left</strong> panel examples</p>
+            <a href="#leftpanel3" class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-mini" data-ajax="false">Overlay</a>
+            <a href="#leftpanel1" class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-mini" data-ajax="false">Reveal</a>
+            <a href="#leftpanel2" class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-mini" data-ajax="false">Push</a>
+
+            <p><strong>Right</strong> panel examples</p>
+            <a href="#rightpanel3" class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-mini" data-ajax="false">Overlay</a>
+            <a href="#rightpanel1" class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-mini" data-ajax="false">Reveal</a>
+            <a href="#rightpanel2" class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-mini" data-ajax="false">Push</a>
+            
+
+        </div><!-- /content -->
+
+    </div><!-- /page -->
+    
+    
+    <div data-role="page" id="ex-panel-page-2" data-quicklinks="true">
+
+        <div data-role="header">
+            <a href="#leftpanel1" class="ui-btn ui-corner-all ui-icon-home ui-btn-icon-left ui-icon-bars ui-btn-icon-left" rel="external">Menu</a>
+            <h1>External panels 2</h1>
+            <a href="index.html" class="ui-btn ui-corner-all ui-icon-home ui-btn-icon-left">Home</a>
+            
+        </div><!-- /header -->
+
+        <div role="main" class="ui-content jqm-content jqm-fullwidth">
+
+            <h1>External Panels Page 2</h1>
+
+            <p><strong>Left</strong> panel examples</p>
+            <a href="#leftpanel3" class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-mini" data-ajax="false">Overlay</a>
+            <a href="#leftpanel1" class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-mini" data-ajax="false">Reveal</a>
+            <a href="#leftpanel2" class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-mini" data-ajax="false">Push</a>
+
+            <p><strong>Right</strong> panel examples</p>
+            <a href="#rightpanel3" class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-mini" data-ajax="false">Overlay</a>
+            <a href="#rightpanel1" class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-mini" data-ajax="false">Reveal</a>
+            <a href="#rightpanel2" class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-mini" data-ajax="false">Push</a>
+                   
+        </div><!-- /content -->
+    </div><!-- /page -->
+    
+    
+    
+    
+<!-- EXTERNAL PANELS -->
+    
+	<div data-role="panel" id="leftpanel1" data-position="left" data-display="reveal" data-theme="a">
+
+        <h3>Left Panel: Reveal</h3>
+        <a href="#ex-panel-page-1" data-rel="close" class="ui-btn ui-shadow ui-corner-all ui-btn-a ui-icon-arrow-r ui-btn-icon-left">Page 1</a>
+        <a href="#ex-panel-page-2" data-rel="close" class="ui-btn ui-shadow ui-corner-all ui-btn-a ui-icon-arrow-r ui-btn-icon-left">Page 2</a>
+
+	</div><!-- /leftpanel1 -->
+
+	<!-- leftpanel2  -->
+	<div data-role="panel" id="leftpanel2" data-position="left" data-display="push" data-theme="a">
+
+        <h3>Left Panel: Push</h3>
+        <a href="#ex-panel-page-1" data-rel="close" class="ui-btn ui-shadow ui-corner-all ui-btn-a ui-icon-arrow-r ui-btn-icon-left">Page 1</a>
+        <a href="#ex-panel-page-2" data-rel="close" class="ui-btn ui-shadow ui-corner-all ui-btn-a ui-icon-arrow-r ui-btn-icon-left">Page 2</a>
+
+	</div><!-- /leftpanel2 -->
+
+	<!-- leftpanel3  -->
+	<div data-role="panel" id="leftpanel3" data-position="left" data-display="overlay" data-theme="a">
+
+        <h3>Left Panel: Overlay</h3>
+        <a href="#ex-panel-page-1" data-rel="close" class="ui-btn ui-shadow ui-corner-all ui-btn-a ui-icon-arrow-r ui-btn-icon-left">Page 1</a>
+        <a href="#ex-panel-page-2" data-rel="close" class="ui-btn ui-shadow ui-corner-all ui-btn-a ui-icon-arrow-r ui-btn-icon-left">Page 2</a>
+
+	</div><!-- /leftpanel3 -->
+
+	<!-- rightpanel1  -->
+	<div data-role="panel" id="rightpanel1" data-position="right" data-display="reveal" data-theme="b">
+
+        <h3>Right Panel: Reveal</h3>
+        <a href="#ex-panel-page-1" data-rel="close" class="ui-btn ui-shadow ui-corner-all ui-btn-a ui-icon-arrow-r ui-btn-icon-left">Page 1</a>
+        <a href="#ex-panel-page-2" data-rel="close" class="ui-btn ui-shadow ui-corner-all ui-btn-a ui-icon-arrow-r ui-btn-icon-left">Page 2</a>
+
+	</div><!-- /rightpanel1 -->
+
+	<!-- rightpanel2  -->
+	<div data-role="panel" id="rightpanel2" data-position="right" data-display="push" data-theme="b">
+
+        <h3>Right Panel: Push</h3>
+        <a href="#ex-panel-page-1" data-rel="close" class="ui-btn ui-shadow ui-corner-all ui-btn-a ui-icon-arrow-r ui-btn-icon-left">Page 1</a>
+        <a href="#ex-panel-page-2" data-rel="close" class="ui-btn ui-shadow ui-corner-all ui-btn-a ui-icon-arrow-r ui-btn-icon-left">Page 2</a>
+
+	</div><!-- /rightpanel2 -->
+
+	<!-- rightpanel3  -->
+	<div data-role="panel" id="rightpanel3" data-position="right" data-display="overlay" data-theme="b">
+
+        <h3>Right Panel: Overlay</h3>
+        <a href="#ex-panel-page-1" data-rel="close" class="ui-btn ui-shadow ui-corner-all ui-btn-a ui-icon-arrow-r ui-btn-icon-left">Page 1</a>
+        <a href="#ex-panel-page-2" data-rel="close" class="ui-btn ui-shadow ui-corner-all ui-btn-a ui-icon-arrow-r ui-btn-icon-left">Page 2</a>
+
+	</div><!-- /rightpanel3 -->
+    
+</body>
+</html>
